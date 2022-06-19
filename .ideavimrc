@@ -36,8 +36,8 @@ nmap <CR> o<Esc>
 " Find more examples here: https://jb.gg/share-ideavimrc
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
+nnoremap <c-j> :action MoveLineDown<CR>
+nnoremap <c-k> :action MoveLineUp<CR>
 
 nnoremap <c-f> :action GotoFile<CR>
 nnoremap <c-a> :action GotoAction<CR>
