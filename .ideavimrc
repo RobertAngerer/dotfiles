@@ -2,14 +2,7 @@ set surround
 set number relativenumber
 set NERDTree
 
-"" Source your .vimrc
 
-
-"source ~/.vimrc
-
-let mapleader=" "
-
-"" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
 set scrolloff=8
@@ -18,7 +11,10 @@ set scrolloff=8
 set incsearch
 set ignorecase
 
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+" own mappings"
 
+let mapleader=" "
 nmap <leader>/ <action>(ShowErrorDescription)
 
 " system clipboard
@@ -36,8 +32,11 @@ nmap <CR> o<Esc>
 " Find more examples here: https://jb.gg/share-ideavimrc
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-nnoremap <c-j> :action MoveLineDown<CR>
-nnoremap <c-k> :action MoveLineUp<CR>
+nnoremap <c-j> :action PreviousTab<CR>
+nnoremap <c-k> :action NextTab<Cr>
+
+nnoremap <leader>j :action MoveLineDown<CR>
+nnoremap <leader>k :action MoveLineUp<CR>
 
 nnoremap <c-f> :action GotoFile<CR>
 nnoremap <c-a> :action GotoAction<CR>
