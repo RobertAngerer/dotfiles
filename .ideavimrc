@@ -1,25 +1,23 @@
-set surround
-set number relativenumber
-set NERDTree
-
-
-" Show a few lines of context around the cursor. Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
-set scrolloff=8
-
-" Do incremental searching.
-set incsearch
-set ignorecase
-
-" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-" own mappings"
-
 let mapleader=" "
+
+### Sets ###
+set easymotion
+set NERDTree
+set multiple-cursors
+set ideajoin
+set surround
+
+set incsearch
+set hlsearch
+set ignorecase
+set number relativenumber
+set scrolloff=8
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+
 nmap <leader>/ <action>(ShowErrorDescription)
 
 " system clipboard
-vmap <leader>y "+y
-nmap <leader>p "+p
+set clipboard+=unnamed
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
@@ -28,39 +26,74 @@ set visualbell
 " Insert new line without leaving leaving normal mode, otherwise <CR> has same functionality as j"
 nmap <CR> o<Esc>
 
-
 " Find more examples here: https://jb.gg/share-ideavimrc
+### Window/Tab-movement###
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-nnoremap <c-j> :action PreviousTab<CR>
-nnoremap <c-k> :action NextTab<Cr>
+nnoremap <c-j> J
+nnoremap J :action PreviousTab<CR>
+nnoremap K :action NextTab<Cr>
 
-nnoremap <leader>j :action MoveLineDown<CR>
-nnoremap <leader>k :action MoveLineUp<CR>
 
+### Find / Go to ###
 nnoremap <c-f> :action GotoFile<CR>
 nnoremap <c-a> :action GotoAction<CR>
-nnoremap gc :action GotoClass<CR>
 nnoremap gi :action GotoImplementation<CR>
-nnoremap gd :action GotToDeclaration<CR>
-nnoremap gp :action GotToSuperMethod<CR>
-nnoremap gt :action GotoTest<CR>
+nnoremap gd :action GotoDeclaration<CR>
 nnoremap gb :action Back<CR>
 nnoremap gf :action Forward<CR>
 nnoremap <leader>f  :action FindUsages<CR>
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+nnoremap <leader>l :action RecentLocations<CR>
 
+### Open tool windows ###
 nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
 nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
-
+nnoremap <c-r> :action ActivateRunToolWindow<Cr>
 nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+nnoremap <c-d> :action ActivateDatabaseToolWindow<CR>
+nnoremap <leader>y :action HideAllWindows<CR>
 
 nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
 nnoremap <Leader>=  :action ReformatCode<CR>
-nmap <leader>e <action>(GotoNextError)
 nnoremap <leader>o :action OptimizeImports<CR>
-nnoremap <leader>l :action RecentLocations<CR>
-nnoremap <leader>h  :action LocalHistory.ShowHistory<CR>
+
+### Run/Debug ###
+### Run ###
+nnoremap ga :action ChooseRunConfiguration<CR>
+nnoremap gr :action ContextRun<CR>
+nnoremap gR :action Rerun<CR>
+nnoremap gs :action Stop<CR>
+### Debug ###
+nnoremap <leader>a :action Debug<CR>
+nnoremap gf :action ContextDebug<CR>
+nnoremap g<leader> :action ChooseDebugConfiguration<CR>
+nnoremap <leader>b :action ToggleLineBreakpoint<CR>
 
 
-nnoremap ge :action GotoNextError<CR>
-nnoremap gE :action GotoPreviousError<CR>
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+
+nnoremap <leader>j :action RecentFiles<CR>
+nnoremap <leader>s :action Switcher<CR>
+
+
+Multiple cursors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+map mc <A-n>
+map mx <A-x>
+map mp <A-p>
+
+nnoremap <leader>g :action Generate<CR>
+
+command Ntf NERDTreeFind
+command BP ViewBreakpoints
+
+nnoremap <leader>d :action QuickJavaDoc<CR>
+nnoremap <c-q> :action Unsplit<CR>
+
+noremap <leader>cap :action CopyAbsolutePath<CR>
+
+
+nmap <leader>j :action AceLineAction<CR>
