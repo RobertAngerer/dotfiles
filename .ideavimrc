@@ -5,6 +5,7 @@ set easymotion
 set NERDTree
 set multiple-cursors
 set ideajoin
+set sneak
 set surround
 
 set incsearch
@@ -14,6 +15,8 @@ set number relativenumber
 set scrolloff=8
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
+nmap f <Plug>(sneak-s)
+nmap F <Plug>(sneak-S)
 nmap <leader>/ <action>(ShowErrorDescription)
 
 " system clipboard
@@ -50,7 +53,7 @@ nnoremap <leader>l :action RecentLocations<CR>
 ### Open tool windows ###
 nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
 nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
-nnoremap <c-r> :action ActivateRunToolWindow<Cr>
+nnoremap <c-w> :action ActivateRunToolWindow<Cr>
 nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
 nnoremap <c-d> :action ActivateDatabaseToolWindow<CR>
 nnoremap <leader>y :action HideAllWindows<CR>
