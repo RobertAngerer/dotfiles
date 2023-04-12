@@ -1,6 +1,3 @@
-hs.hotkey.bind({"cmd", "ctrl"}, "W", function()
-	hs.alert.show("Hello World")
-end)
 function open_app(name)
     return function()
         hs.application.launchOrFocus(name)
