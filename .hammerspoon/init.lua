@@ -20,11 +20,3 @@ end
 
 hs.hotkey.bind({"ctrl"}, "n", keyCode("down", {}), nil, keyCode("down", {}))
 hs.hotkey.bind({"ctrl"}, "p", keyCode("up", {}), nil, keyCode("up", {}))
-
-
-hs.hotkey.bind({'left_control', 'left_option'}, 'h', function()
-  hs.eventtap.keyStroke({}, 'left')
-end)
-hs.hotkey.bind({'left_control', 'left_option'}, 'l', function()
-  hs.eventtap.keyStroke({}, 'right')
-end)
