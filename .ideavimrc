@@ -9,7 +9,6 @@ set sneak
 set surround
 
 set incsearch
-set hlsearch
 set ignorecase
 set number relativenumber
 set scrolloff=8
@@ -99,4 +98,4 @@ nnoremap <c-q> :action Unsplit<CR>
 noremap <leader>cap :action CopyAbsolutePath<CR>
 
 
-nmap <leader>j :action AceLineAction<CR>
+n
