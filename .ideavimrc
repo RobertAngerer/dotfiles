@@ -8,8 +8,8 @@ set ideajoin
 set sneak
 set surround
 
-set incsearch
 set ignorecase
+set incsearch
 set number relativenumber
 set scrolloff=8
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
@@ -98,4 +98,6 @@ nnoremap <c-q> :action Unsplit<CR>
 noremap <leader>cap :action CopyAbsolutePath<CR>
 
 
-n
+nmap <leader>j :action AceLineAction<CR>
+
+nnoremap <leader>p :action ToggleDistractionFreeMode<CR>
