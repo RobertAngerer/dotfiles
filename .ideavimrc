@@ -58,8 +58,8 @@ nnoremap <c-d> :action ActivateDatabaseToolWindow<CR>
 nnoremap <leader>y :action HideAllWindows<CR>
 
 nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
-nnoremap <Leader>=  :action ReformatCode<CR>
-nnoremap <leader>o :action OptimizeImports<CR>
+nnoremap <Leader>o  :action ReformatCode<CR>
+nnoremap <leader>= :action OptimizeImports<CR>
 
 ### Run/Debug ###
 ### Run ###
