@@ -10,7 +10,6 @@ set surround
 
 set ignorecase
 set incsearch
-set number relativenumber
 set scrolloff=8
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
@@ -43,6 +42,7 @@ nnoremap <c-a> :action GotoAction<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gb :action Back<CR>
+nnoremap gp :action GoToSuperMethod<CR>
 nnoremap gf :action Forward<CR>
 nnoremap <leader>f  :action FindUsages<CR>
 nnoremap ge :action GotoNextError<CR>
@@ -101,3 +101,9 @@ noremap <leader>cap :action CopyAbsolutePath<CR>
 nmap <leader>j :action AceLineAction<CR>
 
 nnoremap <leader>p :action ToggleDistractionFreeMode<CR>
+
+NERDTree
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
+
