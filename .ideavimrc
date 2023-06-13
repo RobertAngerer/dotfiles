@@ -58,8 +58,7 @@ nnoremap <c-d> :action ActivateDatabaseToolWindow<CR>
 nnoremap <leader>y :action HideAllWindows<CR>
 
 nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
-nnoremap <Leader>o  :action ReformatCode<CR>
-nnoremap <leader>= :action OptimizeImports<CR>
+nnoremap <Leader>o :action ReformatCode \| action OptimizeImports<CR>
 
 ### Run/Debug ###
 ### Run ###
@@ -98,7 +97,6 @@ nnoremap <c-q> :action Unsplit<CR>
 noremap <leader>cap :action CopyAbsolutePath<CR>
 
 
-nmap <leader>j :action AceLineAction<CR>
 
 nnoremap <leader>p :action ToggleDistractionFreeMode<CR>
 
@@ -106,4 +104,3 @@ NERDTree
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapJumpParent='h'
-
