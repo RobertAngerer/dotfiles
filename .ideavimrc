@@ -59,8 +59,8 @@ nnoremap <c-d> :action ActivateDatabaseToolWindow<CR>
 nnoremap <leader>y :action HideAllWindows<CR>
 
 nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
-nnoremap <leader>o :action ReformatCode<CR>
-nnoremap <leader>u :action OptimizeImports<CR>
+nnoremap <leader>u :action ReformatCode<CR>
+nnoremap <leader>o :action OptimizeImports<CR>
 
 ### Run/Debug ###
 ### Run ###
@@ -106,3 +106,4 @@ NERDTree
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapJumpParent='h'
+
